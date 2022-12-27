@@ -13,10 +13,7 @@ namespace CustomerAPI.Contexts
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Phone> Phones { get; set; }
 
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //{
-        //    optionsBuilder.UseNpgsql("Server=localhost;Port=5432;User Id=postgres;Password=1234;Database=CustomerManageDB;");
-        //}
+      
     }
 
 
