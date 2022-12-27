@@ -83,12 +83,12 @@ namespace CustomerAPI.Controllers
             // Count the number of occurrences of each vowel in the name
             int aCount = 0;
             int eCount = 0;
-            int ıCount = 0;
+            int iiCount = 0;
             int iCount = 0;
             int oCount = 0;
-            int öCount = 0;
+            int ooCount = 0;
             int uCount = 0;
-            int üCount = 0;
+            int uuCount = 0;
 
             string controlName = name.ToLower();
 
@@ -104,7 +104,7 @@ namespace CustomerAPI.Controllers
                         break;
 
                     case 'ı':
-                        ıCount++;
+                        iiCount++;
                         break;
 
                     case 'i':
@@ -115,7 +115,7 @@ namespace CustomerAPI.Controllers
                         break;
 
                     case 'ö':
-                        öCount++;
+                        ooCount++;
                         break;
 
                     case 'u':
@@ -123,14 +123,14 @@ namespace CustomerAPI.Controllers
                         break;
 
                     case 'ü':
-                        üCount++;
+                        uuCount++;
                         break;
 
                 }
             }
 
             // Return true if at least 3 of the same vowels are present
-            return (aCount >= 3 || eCount >= 3 || iCount >= 3 || oCount >= 3 || uCount >= 3 || ıCount >= 3 || öCount >= 3 || üCount >= 3 );
+            return (aCount >= 3 || eCount >= 3 || iCount >= 3 || oCount >= 3 || uCount >= 3 || iiCount >= 3 || ooCount >= 3 || uuCount >= 3 );
         }
 
         // DELETE: api/Customers/5
