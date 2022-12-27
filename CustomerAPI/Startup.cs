@@ -26,19 +26,11 @@ namespace CustomerAPI
             services.AddControllers();
             services.AddDbContext<CustomerManageDbContext>(options => options.UseNpgsql("Server=localhost;Port=5432;User Id=postgres;Password=1234;Database=CustomerManageDB;"));
 
-            //services.AddMvc(option => option.EnableEndpointRouting = false)
-            //    .SetCompatibilityVersion(CompatibilityVersion.Version_3_0)
-            //    .AddNewtonsoftJson(opt => opt.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore);
             services.AddControllersWithViews()
                 .AddNewtonsoftJson(options =>
                     options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
 );
-            //services.AddDbContext<dbCustomerContext>(options =>
-            // options.UseNpgsql("Server=localhost;Port=5432;User Id=postgres;Password=1234;Database=dbCustomer;"));
-            //services.AddDbContext<dbCustomerContext>(options =>
-            // options.server(Configuration.GetConnectionString("dbCustomer")));
-
-
+           
 
 
 
@@ -51,7 +43,7 @@ namespace CustomerAPI
             {
                 app.UseDeveloperExceptionPage();
             }
-            //Güvenlik Politikasý
+            
             app.UseCors(x => x
                 .AllowAnyMethod()
                 .AllowAnyHeader()
